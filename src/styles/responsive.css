@@ -1,3 +1,25 @@
+@media (max-width: 992px) {
+  .hero-slide {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content,
+  .hero-visual {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-menu {
     flex-direction: column;
@@ -9,10 +31,29 @@
   }
 
   .hero {
-    padding: 120px 20px;
+    padding: 44px 20px 30px;
   }
 
   .hero h1 {
-    font-size: 30px;
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 21px;
+    margin: 16px 0 28px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+  }
+
+  .hero-dot {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero-dot.active::after {
+    inset: 6px;
   }
 }

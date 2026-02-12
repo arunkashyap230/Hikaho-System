@@ -109,6 +109,7 @@ body {
 .nav-links {
   display: flex;
   gap: 35px;
+  align-items: center;
 }
 
 .nav-links a {
@@ -121,6 +122,58 @@ body {
 
 .nav-links a:hover {
   color: #f47c00;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-caret {
+  font-size: 25px;
+  margin-left: -4px; /* moves it slightly left */
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  background: #f5f5f5;
+  padding: 14px 0;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 20;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 24px;
+  color: #1f2e46;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.nav-dropdown:hover .dropdown-caret,
+.nav-dropdown:focus-within .dropdown-caret {
+  transform: rotate(180deg);
 }
 
 /* Enquire Button */

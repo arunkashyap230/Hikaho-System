@@ -8,6 +8,29 @@ import "./navbar.css";
 const PHONE = "+91-8917553919";
 const EMAIL = "enquiry@hikahosystem.com";
 const HOURS = "Monday to Friday: 9.30 am to 6.30 PM";
+const ABOUT_DROPDOWN_ITEMS = [
+  { label: "Why Hikaho", to: "/about#why-hikaho" },
+  { label: "Vision & Values", to: "/about#vision-values" },
+  { label: "Domain Expertise", to: "/about#domain-expertise" },
+];
+
+const SERVICES_DROPDOWN_ITEMS = [
+  { label: "Why Hikaho", to: "/about#why-hikaho" },
+  { label: "Vision & Values", to: "/about#vision-values" },
+  { label: "Domain Expertise", to: "/about#domain-expertise" },
+];
+
+const CAREER_DROPDOWN_ITEMS = [
+  { label: "Why Hikaho", to: "/about#why-hikaho" },
+  { label: "Vision & Values", to: "/about#vision-values" },
+  { label: "Domain Expertise", to: "/about#domain-expertise" },
+];
+
+const INDUSTRY_DROPDOWN_ITEMS = [
+  { label: "Why Hikaho", to: "/about#why-hikaho" },
+  { label: "Vision & Values", to: "/about#vision-values" },
+  { label: "Domain Expertise", to: "/about#domain-expertise" },
+];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -86,10 +109,62 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <nav className="nav-links">
             <Link to="/">Home</Link>
-            <Link to="/about">About Us</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/career">Career</Link>
-            <Link to="/industry">Industry Practice</Link>
+
+            {/* <Link to="/about">About Us</Link> */}
+            <div className="nav-dropdown">
+              <Link to="/about" className="nav-dropdown-trigger">
+                About Us <span className="dropdown-caret">▾</span>
+              </Link>
+              <div className="nav-dropdown-menu">
+                {ABOUT_DROPDOWN_ITEMS.map((item) => (
+                  <Link key={item.label} to={item.to}>
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* <Link to="/services">Services</Link> */}
+            <div className="nav-dropdown">
+              <Link to="/services" className="nav-dropdown-trigger">
+                Services <span className="dropdown-caret">▾</span>
+              </Link>
+              <div className="nav-dropdown-menu">
+                {SERVICES_DROPDOWN_ITEMS.map((item) => (
+                  <Link key={item.label} to={item.to}>
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* <Link to="/career">Career</Link> */}
+            <div className="nav-dropdown">
+              <Link to="/Career" className="nav-dropdown-trigger">
+                Career <span className="dropdown-caret">▾</span>
+              </Link>
+              <div className="nav-dropdown-menu">
+                {CAREER_DROPDOWN_ITEMS.map((item) => (
+                  <Link key={item.label} to={item.to}>
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* <Link to="/industry">Industry Practice</Link> */}
+            <div className="nav-dropdown">
+              <Link to="/industry" className="nav-dropdown-trigger">
+                Industry Practice <span className="dropdown-caret">▾</span>
+              </Link>
+              <div className="nav-dropdown-menu">
+                {INDUSTRY_DROPDOWN_ITEMS.map((item) => (
+                  <Link key={item.label} to={item.to}>
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
             <Link to="/contact">Contact Us</Link>
           </nav>
 
