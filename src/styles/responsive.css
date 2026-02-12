@@ -69,3 +69,93 @@
     padding: 0 10px;
   }
 }
+
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-showcase {
+    padding: 36px 0 44px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-card {
+    min-height: 150px;
+  }
+
+  .stats-icon {
+    font-size: 52px;
+  }
+
+  .stats-content-box h3 {
+    font-size: 44px;
+    margin: 24px 0 16px;
+    padding-bottom: 14px;
+  }
+
+  .stats-content-box p {
+    font-size: 20px;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .about-visuals {
+    position: static;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-showcase {
+    padding-top: 46px;
+    padding-bottom: 46px;
+  }
+
+  .about-kicker {
+    margin-bottom: 8px;
+  }
+
+  .about-content h2 {
+    margin-bottom: 20px;
+  }
+
+  .about-content h3 {
+    margin: 22px 0 10px;
+  }
+
+  .about-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  .about-exp-card {
+    padding: 20px 18px 24px;
+    margin-bottom: 20px;
+  }
+
+  .about-exp-card h3 {
+    font-size: 56px;
+  }
+
+  .about-exp-card p {
+    font-size: 28px;
+  }
+
+  .about-accent-line {
+    height: 14px;
+  }
+}

@@ -245,3 +245,142 @@ body {
   padding: 12px;
   border: 1px solid #ddd;
 }
+/* ================= ABOUT SECTION ================= */
+/* ================= ABOUT SECTION ================= */
+
+.about-showcase {
+  background: #ececec;
+  padding: 80px 0;
+}
+
+/* MAIN 2 COLUMN LAYOUT */
+.about-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ================= LEFT SIDE ================= */
+
+/* 2 columns inside left side */
+.about-visuals {
+  display: grid;
+  grid-template-columns: 220px 220px;
+  grid-template-rows: auto auto;
+  gap: 0px 40px;
+  align-items: start;
+}
+
+/* IMAGE 1 */
+.about-top-image {
+  width: 220px;
+  height: 280px; /* 🔥 length badhayi */
+  object-fit: cover; /* image stretch nahi hogi */
+  border-radius: 12px;
+  grid-column: 1;
+  grid-row: 1;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE 2 */
+.about-middle-image {
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+  grid-column: 2;
+  grid-row: 1;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* EXPERIENCE CARD (Below Image 1) */
+.about-exp-card {
+  width: 220px;
+  height: 140px; /* thoda bada card */
+  background: #f58220;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-exp-card h3 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about-exp-card h3 span {
+  font-size: 0.6em;
+}
+
+.about-exp-card p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.about-content {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #1e3447;
+}
+
+.about-kicker {
+  color: #f58220;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #08274a;
+}
+
+.about-content h3 {
+  font-size: 20px;
+  margin: 30px 0 12px;
+  color: #08274a;
+}
+
+.about-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.about-content li {
+  margin-bottom: 8px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-visuals {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .about-exp-card,
+  .about-top-image,
+  .about-middle-image {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .about-content {
+    margin-top: 40px;
+  }
+}
