@@ -1,3 +1,11 @@
+/* ================= 1200px ================= */
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= 992px ================= */
 @media (max-width: 992px) {
   .hero-inner {
     flex-direction: column;
@@ -20,6 +28,7 @@
   }
 }
 
+/* ================= 768px ================= */
 @media (max-width: 768px) {
   .hero {
     padding: 70px 20px 90px;
@@ -31,5 +40,32 @@
 
   .hero p {
     font-size: 16px;
+  }
+
+  .stats-showcase {
+    padding: 30px 0 35px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-card {
+    min-height: 120px; /* 150 thoda zyada lagta hai */
+  }
+
+  .stats-icon {
+    font-size: 40px;
+  }
+
+  .stats-content-box h3 {
+    font-size: 32px;
+    margin: 12px 0 8px;
+    padding-bottom: 8px;
+  }
+
+  .stats-content-box p {
+    font-size: 16px;
+    padding: 0 10px;
   }
 }

@@ -158,10 +158,57 @@ body {
   padding: 80px 0;
 }
 
-.stats {
-  background: #f58220;
-  color: white;
-  padding: 60px 0;
+.stats-showcase {
+  background: #ececec;
+  padding: 36px 0 40px;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stats-card {
+  display: flex;
+  background: #efe4cf;
+  min-height: 120px;
+}
+
+.stats-icon-box {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgba(30, 52, 71, 0.1);
+}
+
+.stats-icon {
+  font-size: 48px;
+  color: #f7931e;
+}
+
+.stats-content-box {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-content-box h3 {
+  color: #f7931e;
+  font-size: 40px;
+  line-height: 1;
+  text-align: center;
+  margin: 16px 0 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(30, 52, 71, 0.12);
+}
+
+.stats-content-box p {
+  margin: 0;
+  padding: 0 10px;
+  color: #11253a;
+  font-size: 18px; /* Clamp hata diya */
+  text-align: center;
 }
 
 .footer {
