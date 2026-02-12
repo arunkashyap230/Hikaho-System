@@ -1,11 +1,9 @@
-import Topbar from "../components/layout/Topbar";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
 export default function Career() {
   return (
     <>
-      <Topbar />
       <Navbar />
 
       <section className="page-header">
