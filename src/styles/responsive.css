@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hero {
+    padding: 120px 20px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+}
