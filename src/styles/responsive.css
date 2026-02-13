@@ -208,3 +208,50 @@
     font-size: 24px;
   }
 }
+
+@media (max-width: 992px) {
+  .planning-cta-inner {
+    min-height: auto;
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .planning-copy h2 {
+    max-width: 100%;
+  }
+
+  .planning-play {
+    width: 140px;
+    height: 140px;
+    flex-basis: 140px;
+  }
+
+  .planning-play-inner {
+    width: 88px;
+    height: 88px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .planning-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+  }
+
+  .planning-copy p {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .planning-btn {
+    width: 100%;
+    padding: 16px 18px;
+    font-size: 22px;
+  }
+
+  .planning-play {
+    align-self: center;
+  }
+}
