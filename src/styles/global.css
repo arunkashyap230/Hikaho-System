@@ -296,17 +296,13 @@ body {
 /* EXPERIENCE CARD (Below Image 1) */
 .about-exp-card {
   width: 220px;
-  height: 140px; /* thoda bada card */
   background: #f58220;
   color: #fff;
-  padding: 20px;
+  padding: 22px;
   border-radius: 12px;
   text-align: center;
   grid-column: 1;
   grid-row: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .about-exp-card h3 {
@@ -382,5 +378,115 @@ body {
 
   .about-content {
     margin-top: 40px;
+  }
+}
+/* ================= INDUSTRY PRACTICES SECTION ================= */
+
+.industry-practices {
+  background: #ececec;
+  padding: 80px 0;
+}
+
+/* HEADER */
+.industry-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 50px;
+}
+
+.industry-kicker {
+  margin: 0 0 8px;
+  color: #f58220;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.industry-header h2 {
+  margin: 0;
+  color: #08274a;
+  font-size: 48px;
+}
+
+.industry-intro {
+  margin: 0;
+  color: #1e3447;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ================= GRID ================= */
+
+/* PC / Laptop → 4 in one line */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.industry-practice-card {
+  background: #f5f5f5;
+  padding: 30px;
+  min-height: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: 0.3s;
+}
+
+.industry-practice-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ICON */
+.industry-card-icon {
+  font-size: 50px;
+  color: #f58220;
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.industry-practice-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #08274a;
+}
+
+/* DESCRIPTION */
+.industry-practice-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1e3447;
+  flex-grow: 1;
+}
+
+/* READ MORE */
+.industry-read-more {
+  margin-top: 20px;
+  color: #f58220;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industry-header {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .industry-grid {
+    grid-template-columns: 1fr;
   }
 }

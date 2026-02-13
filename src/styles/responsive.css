@@ -159,3 +159,52 @@
     height: 14px;
   }
 }
+
+@media (max-width: 992px) {
+  .industry-header {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .industry-practice-card {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .industry-practices::before {
+    width: 220px;
+    height: 220px;
+    left: 10px;
+    top: 16px;
+  }
+
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-practice-card {
+    padding: 24px 22px 18px;
+    min-height: auto;
+  }
+
+  .industry-card-icon {
+    font-size: 52px;
+    margin-bottom: 14px;
+  }
+
+  .industry-practice-card h3 {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .industry-practice-card p {
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+
+  .industry-read-more {
+    font-size: 24px;
+  }
+}
