@@ -560,3 +560,231 @@ body {
   font-size: 38px;
   padding-left: 6px;
 }
+
+.testimonials-band {
+  background: #395572; /* section background */
+  padding: 0; /* upar ka gap remove */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: -60px; /* rectangle thoda upar le jaane ke liye */
+}
+
+.testimonials-header {
+  width: 100%; /* full width */
+  max-width: 1200px; /* optional, rectangle ka max width */
+  background: #ffffff; /* white rectangle */
+  border-radius: 8px; /* optional rounded corners */
+  padding: 80px 40px; /* height & spacing */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials-header p {
+  margin: 0 0 12px;
+  color: #f58220;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.testimonials-header h2 {
+  margin: 0;
+  color: #0a2b4d;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.locations-enquiry {
+  background: #395572;
+  padding-top: 80px;
+  padding-bottom: 84px;
+}
+
+.locations-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.locations-col h2 {
+  margin: 0 0 20px;
+  color: #f1f4f8;
+  font-size: clamp(46px, 3.1vw, 76px);
+}
+
+.locations-intro {
+  color: #f1f4f8;
+  font-size: clamp(22px, 1.25vw, 32px);
+  line-height: 1.6;
+  max-width: 900px;
+  margin-bottom: 34px;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.location-card {
+  border: 1px solid #345ca1;
+  border-radius: 6px;
+  padding: 24px 28px;
+  background: rgba(40, 67, 95, 0.5);
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.location-icon {
+  color: #f58220;
+  font-size: 90px;
+  flex: 0 0 auto;
+}
+
+.location-card h3 {
+  margin: 0 0 6px;
+  color: #f8f9fb;
+  font-size: clamp(28px, 1.8vw, 40px);
+}
+
+.location-card p {
+  margin: 0;
+  color: #f8f9fb;
+  font-size: clamp(18px, 1.1vw, 30px);
+  line-height: 1.5;
+}
+
+.enquiry-card {
+  background: #ececec;
+  padding: 44px 40px 34px;
+  margin-top: 0;
+}
+
+.enquiry-card > p {
+  margin: 0 0 8px;
+  color: #f58220;
+  font-size: clamp(20px, 1.05vw, 30px);
+}
+
+.enquiry-card h3 {
+  margin: 0 0 26px;
+  color: #0f2745;
+  font-size: clamp(46px, 2.75vw, 68px);
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  border: 1px solid #c6cbd1;
+  border-radius: 6px;
+  padding: 18px 20px;
+  font-size: clamp(20px, 1vw, 28px);
+  color: #1e3447;
+  background: transparent;
+}
+
+.enquiry-form button {
+  align-self: flex-start;
+  border: none;
+  background: #f58220;
+  color: #fff;
+  font-size: clamp(24px, 1.1vw, 30px);
+  padding: 16px 52px;
+  border-radius: 4px;
+}
+.footer {
+  position: relative;
+  background: #b79d84;
+  color: #f8f4ef;
+  padding: 30px 20px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px; /* 1px bada kiya */
+}
+
+.footer-top {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.footer-brand img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  margin: 0;
+  color: #fff;
+  font-size: 13px; /* 1px bada kiya */
+  line-height: 1.4;
+  max-width: 250px;
+}
+
+.footer h3 {
+  margin: 6px 0 10px;
+  font-size: 17px; /* 1px bada kiya */
+  color: #fff;
+}
+
+.footer-list li {
+  color: #fff;
+  font-size: 13px; /* 1px bada kiya */
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(245, 237, 228, 0.2);
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 13px; /* 1px bada kiya */
+}
+
+.footer-bottom strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .footer-brand img {
+    max-width: 120px;
+  }
+
+  .footer h3 {
+    font-size: 15px; /* 1px bada kiya */
+  }
+
+  .footer-list li,
+  .footer-brand p,
+  .footer-bottom p {
+    font-size: 12px; /* 1px bada kiya */
+  }
+}
