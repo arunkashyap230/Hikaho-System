@@ -788,3 +788,56 @@ body {
     font-size: 12px; /* 1px bada kiya */
   }
 }
+
+.about-page-hero {
+  background: #cbb7a1;
+  padding: 72px 0 86px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.about-page-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(56px, 4.2vw, 110px);
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.about-page-watermark {
+  position: absolute;
+  left: 0;
+  top: 22px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.12);
+  font-size: clamp(94px, 10vw, 240px);
+  line-height: 1;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.about-page-breadcrumb {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: clamp(30px, 1.6vw, 42px);
+}
+
+.about-page-breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.about-page-breadcrumb span {
+  color: #f58220;
+}
+
+.about-page-breadcrumb span:last-child {
+  color: #f58220;
+}

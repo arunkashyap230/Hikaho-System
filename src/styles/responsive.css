@@ -429,3 +429,19 @@
     padding-top: 14px;
   }
 }
+
+@media (max-width: 768px) {
+  .about-page-hero {
+    padding: 40px 0 46px;
+  }
+
+  .about-page-watermark {
+    top: 12px;
+  }
+
+  .about-page-breadcrumb {
+    margin-top: 14px;
+    font-size: 24px;
+    gap: 10px;
+  }
+}
