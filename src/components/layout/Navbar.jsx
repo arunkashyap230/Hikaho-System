@@ -15,21 +15,38 @@ const ABOUT_DROPDOWN_ITEMS = [
 ];
 
 const SERVICES_DROPDOWN_ITEMS = [
-  { label: "Why Hikaho", to: "/about#why-hikaho" },
-  { label: "Vision & Values", to: "/about#vision-values" },
-  { label: "Domain Expertise", to: "/about#domain-expertise" },
+  { label: "Recruitment & Staffing", to: "/about#why-hikaho" },
+  { label: "HR Consutling", to: "/about#vision-values" },
+  { label: "HR Technology", to: "/about#domain-expertise" },
+  { label: "Training Consulting", to: "/about#domain-expertise" },
 ];
 
 const CAREER_DROPDOWN_ITEMS = [
-  { label: "Why Hikaho", to: "/about#why-hikaho" },
-  { label: "Vision & Values", to: "/about#vision-values" },
-  { label: "Domain Expertise", to: "/about#domain-expertise" },
+  { label: "Current Opening", to: "/about#why-hikaho" },
+  { label: "Submit Your CV", to: "/about#vision-values" },
+  { label: "", to: "/about#domain-expertise" },
 ];
 
 const INDUSTRY_DROPDOWN_ITEMS = [
-  { label: "Why Hikaho", to: "/about#why-hikaho" },
-  { label: "Vision & Values", to: "/about#vision-values" },
-  { label: "Domain Expertise", to: "/about#domain-expertise" },
+  { label: "Real Estate", to: "/about#why-hikaho" },
+  { label: "Retail & E-Commerce/Internet", to: "/about#vision-values" },
+  {
+    label: "EPC(Engineering Procurement Construction)",
+    to: "/about#domain-expertise",
+  },
+  { label: "Advertising & Media", to: "/about#domain-expertise" },
+  { label: "Chemical And Alied Industry", to: "/about#domain-expertise" },
+  {
+    label: "Pharma, Lifr, Sciences, Devices & Diagnostics",
+    to: "/about#domain-expertise",
+  },
+  { label: "FMCG", to: "/about#domain-expertise" },
+  { label: "Information Technology", to: "/about#domain-expertise" },
+  { label: "Telecommunication", to: "/about#domain-expertise" },
+  {
+    label: "Engineering & Manufacturing Industryx",
+    to: "/about#domain-expertise",
+  },
 ];
 
 export default function Navbar() {

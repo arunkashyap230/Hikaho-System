@@ -841,3 +841,72 @@ body {
 .about-page-breadcrumb span:last-child {
   color: #f58220;
 }
+
+.services-detail {
+  background: #ececec;
+}
+
+.services-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.service-detail-card h3 {
+  margin: 0 0 12px;
+  color: #132d46;
+  font-size: clamp(30px, 1.7vw, 46px);
+  font-weight: 700;
+}
+
+.service-detail-card ul {
+  margin: 0;
+  padding-left: 28px;
+}
+
+.service-detail-card li {
+  color: #1e3447;
+  font-size: clamp(22px, 1.18vw, 32px);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.career-form-section {
+  background: #efefef;
+}
+
+.career-form-wrap {
+  max-width: 980px;
+}
+
+.career-apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.career-apply-form input,
+.career-apply-form textarea {
+  width: 100%;
+  border: 1px solid #bcc2c8;
+  border-radius: 6px;
+  padding: 16px 28px;
+  font-size: clamp(20px, 1vw, 30px);
+  color: #18324a;
+  background: transparent;
+}
+
+.career-apply-form input[type="file"] {
+  padding: 6px;
+}
+
+.career-apply-form button {
+  border: none;
+  border-radius: 4px;
+  background: #f5a000;
+  color: #fff;
+  font-size: clamp(26px, 1.2vw, 34px);
+  font-weight: 500;
+  padding: 18px 16px;
+}

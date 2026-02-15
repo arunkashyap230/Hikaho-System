@@ -445,3 +445,41 @@
     gap: 10px;
   }
 }
+
+@media (max-width: 1200px) {
+  .services-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .services-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-detail-card h3 {
+    font-size: 32px;
+  }
+
+  .service-detail-card li {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .career-apply-form {
+    gap: 12px;
+  }
+
+  .career-apply-form input,
+  .career-apply-form textarea {
+    font-size: 18px;
+    padding: 12px 14px;
+  }
+
+  .career-apply-form button {
+    font-size: 22px;
+    padding: 14px 12px;
+  }
+}
