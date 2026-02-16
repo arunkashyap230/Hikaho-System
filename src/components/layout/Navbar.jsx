@@ -55,9 +55,17 @@ const INDUSTRY_DROPDOWN_ITEMS = [
   },
 ];
 
+const MOBILE_DROPDOWNS = {
+  about: { label: "About Us", items: ABOUT_DROPDOWN_ITEMS },
+  services: { label: "Services", items: SERVICES_DROPDOWN_ITEMS },
+  career: { label: "Career", items: CAREER_DROPDOWN_ITEMS },
+  industry: { label: "Industry Practice", items: INDUSTRY_DROPDOWN_ITEMS },
+};
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -72,7 +80,15 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
-  const closeMenu = () => setMenuOpen(false);
+  // const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setActiveMobileDropdown(null);
+  };
+
+  const openMobileDropdown = (key) => setActiveMobileDropdown(key);
+
+  const closeMobileDropdown = () => setActiveMobileDropdown(null);
 
   return (
     <>
@@ -197,6 +213,11 @@ export default function Navbar() {
           </div>
 
           {/* Hamburger for mobile */}
+          {/* <button
+            className="hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          > */}
           <button
             className="hamburger"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -216,7 +237,7 @@ export default function Navbar() {
             ✕
           </button>
         </div>
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/" onClick={closeMenu}>
               Home
@@ -253,7 +274,88 @@ export default function Navbar() {
           <p>📞 {PHONE}</p>
           <p>✉ {EMAIL}</p>
           <p>🕒 {HOURS}</p>
-        </div>
+        </div> */}
+        {activeMobileDropdown ? (
+          <div className="mobile-submenu-view">
+            <div className="mobile-submenu-head">
+              <h4>{MOBILE_DROPDOWNS[activeMobileDropdown].label}</h4>
+              <button type="button" onClick={closeMobileDropdown}>
+                Back ←
+              </button>
+            </div>
+
+            <ul className="mobile-submenu-list">
+              {MOBILE_DROPDOWNS[activeMobileDropdown].items.map((item) => (
+                <li key={item.label}>
+                  <Link to={item.to} onClick={closeMenu}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <>
+            <ul>
+              <li>
+                <Link to="/" onClick={closeMenu}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  className="mobile-dropdown-trigger"
+                  onClick={() => openMobileDropdown("about")}
+                >
+                  <span>About Us</span>
+                  <span>▾</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  className="mobile-dropdown-trigger"
+                  onClick={() => openMobileDropdown("services")}
+                >
+                  <span>Services</span>
+                  <span>▾</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  className="mobile-dropdown-trigger"
+                  onClick={() => openMobileDropdown("career")}
+                >
+                  <span>Career</span>
+                  <span>▾</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  className="mobile-dropdown-trigger"
+                  onClick={() => openMobileDropdown("industry")}
+                >
+                  <span>Industry Practice</span>
+                  <span>▾</span>
+                </button>
+              </li>
+              <li>
+                <Link to="/contact" onClick={closeMenu}>
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+
+            <div className="drawer-contact">
+              <h4>Contact Info</h4>
+              <p>🕒 {HOURS}</p>
+              <p>✉ {EMAIL}</p>
+            </div>
+          </>
+        )}
       </div>
 
       {menuOpen && <div className="overlay" onClick={closeMenu}></div>}
