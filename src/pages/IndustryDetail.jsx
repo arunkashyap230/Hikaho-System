@@ -4,7 +4,7 @@ import Footer from "../components/layout/Footer";
 
 import realEstateImg from "../assets/realstate.jpeg";
 import retailImg from "../assets/Retail.jpeg";
-import advImg from "../assets/adv.jpeg";
+import advImg from "../assets/Adv.jpeg";
 import chemImg from "../assets/chem.jpeg";
 import engiImg from "../assets/Engi.jpeg";
 import epcImg from "../assets/EPC.jpeg";
