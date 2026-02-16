@@ -1,54 +1,28 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import ServicesSection from "../components/sections/ServicesSection";
 
 export default function Industry() {
   return (
     <>
       <Navbar />
 
-      <section className="page-header">
-        <div className="container">
+      <section className="about-page-hero">
+        <div className="container about-page-hero-inner">
           <h1>Industry Practice</h1>
-          <p>Serving Diverse Industry Verticals</p>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="row g-4">
-            <div className="col-md-4 industry-card">
-              <h4>IT & Technology</h4>
-              <p>Hiring for IT services, software, and product companies.</p>
-            </div>
-
-            <div className="col-md-4 industry-card">
-              <h4>Healthcare</h4>
-              <p>Recruitment solutions for hospitals and healthcare firms.</p>
-            </div>
-
-            <div className="col-md-4 industry-card">
-              <h4>Manufacturing</h4>
-              <p>Specialized hiring for industrial and production roles.</p>
-            </div>
-
-            <div className="col-md-4 industry-card">
-              <h4>Banking & Finance</h4>
-              <p>Expert staffing for BFSI sector organizations.</p>
-            </div>
-
-            <div className="col-md-4 industry-card">
-              <h4>Education</h4>
-              <p>Recruitment support for educational institutions.</p>
-            </div>
-
-            <div className="col-md-4 industry-card">
-              <h4>Retail & E-commerce</h4>
-              <p>End-to-end hiring for retail and online businesses.</p>
-            </div>
+          <p className="about-page-watermark" aria-hidden="true">
+            Industry
+          </p>
+          <div className="about-page-breadcrumb">
+            <Link to="/">Home</Link>
+            <span>|</span>
+            <span>Industry Practice</span>
           </div>
         </div>
       </section>
 
+      <ServicesSection />
       <Footer />
     </>
   );

@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import Career from "./pages/Career";
 import Industry from "./pages/Industry";
 import Contact from "./pages/Contact";
+import IndustryDetail from "./pages/IndustryDetail";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/career" element={<Career />} />
         <Route path="/industry" element={<Industry />} />
+        <Route path="/industry/:industrySlug" element={<IndustryDetail />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>

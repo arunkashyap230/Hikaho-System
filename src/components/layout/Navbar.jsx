@@ -28,24 +28,30 @@ const CAREER_DROPDOWN_ITEMS = [
 ];
 
 const INDUSTRY_DROPDOWN_ITEMS = [
-  { label: "Real Estate", to: "/about#why-hikaho" },
-  { label: "Retail & E-Commerce/Internet", to: "/about#vision-values" },
+  { label: "Real Estate", to: "/industry/real-estate" },
+  {
+    label: "Retail & E-Commerce /Internet",
+    to: "/industry/retail-e-commerce-internet",
+  },
   {
     label: "EPC(Engineering Procurement Construction)",
-    to: "/about#domain-expertise",
+    to: "/industry/epc-engineering-procurement-construction",
   },
-  { label: "Advertising & Media", to: "/about#domain-expertise" },
-  { label: "Chemical And Alied Industry", to: "/about#domain-expertise" },
+  { label: "Advertising & Media", to: "/industry/advertising-media" },
+  {
+    label: "Chemical And Allied Industry",
+    to: "/industry/chemical-allied-industry",
+  },
   {
     label: "Pharma, Lifr, Sciences, Devices & Diagnostics",
-    to: "/about#domain-expertise",
+    to: "/industry/pharma-life-sciences-devices-diagnostics",
   },
-  { label: "FMCG", to: "/about#domain-expertise" },
-  { label: "Information Technology", to: "/about#domain-expertise" },
-  { label: "Telecommunication", to: "/about#domain-expertise" },
+  { label: "FMCG", to: "/industry/fmcg" },
+  { label: "Information Technology", to: "/industry/information-technology" },
+  { label: "Telecommunication", to: "/industry/telecommunications" },
   {
     label: "Engineering & Manufacturing Industryx",
-    to: "/about#domain-expertise",
+    to: "/industry/engineering-manufacturing-industry",
   },
 ];
 

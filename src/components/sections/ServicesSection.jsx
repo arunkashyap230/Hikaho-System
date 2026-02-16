@@ -58,12 +58,6 @@ export default function ServicesSection() {
     // <section className="section bg-light">
     <section className="industry-practices section" id="industries">
       <div className="container">
-        {/* <h2>Our Services</h2>
-        <div className="row">
-          <div className="col-md-4">Permanent Staffing</div>
-          <div className="col-md-4">Contract Hiring</div>
-          <div className="col-md-4">HR Consulting</div> */}
-
         <div className="industry-header">
           <div>
             <p className="industry-kicker">
