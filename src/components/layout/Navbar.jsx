@@ -15,10 +15,10 @@ const ABOUT_DROPDOWN_ITEMS = [
 ];
 
 const SERVICES_DROPDOWN_ITEMS = [
-  { label: "Recruitment & Staffing", to: "/about#why-hikaho" },
-  { label: "HR Consutling", to: "/about#vision-values" },
-  { label: "HR Technology", to: "/about#domain-expertise" },
-  { label: "Training Consulting", to: "/about#domain-expertise" },
+  { label: "Recruitment & Staffing", to: "/services" },
+  { label: "HR Consutling", to: "/services" },
+  { label: "HR Technology", to: "/services" },
+  { label: "Training Consulting", to: "/services" },
 ];
 
 const CAREER_DROPDOWN_ITEMS = [
@@ -211,15 +211,11 @@ export default function Navbar() {
 
           {/* Enquire Button */}
           <div className="enquire-btn">
-            <button>Enquire Now »</button>
+            <Link to="/career" className="header-btn">
+              <span>Enquire Now »</span>
+            </Link>
           </div>
 
-          {/* Hamburger for mobile */}
-          {/* <button
-            className="hamburger"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          > */}
           <button
             className="hamburger"
             onClick={() => setMenuOpen(!menuOpen)}

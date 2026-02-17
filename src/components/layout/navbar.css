@@ -186,22 +186,87 @@ body {
 .nav-dropdown:focus-within .dropdown-caret {
   transform: rotate(180deg);
 }
+/* ============================= */
+/* ORIGINAL LIQUID SLIDER EFFECT */
+/* ============================= */
 
-/* Enquire Button */
-
-.enquire-btn button {
-  background: #f47c00;
-  color: white;
-  border: none;
-  padding: 12px 24px;
+.header-btn {
+  border: 0;
+  z-index: 1;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  overflow: hidden;
+  position: relative;
   font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.3s;
+  font-family: "Poppins", sans-serif;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: #f47c04;
+  transition: all 0.4s ease-in-out;
 }
 
-.enquire-btn button:hover {
-  opacity: 0.9;
+/* Text above wave */
+.header-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Wave Layer */
+.header-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  transition: bottom 0.5s ease-in-out;
+  z-index: 1;
+}
+
+/* Real curved wave using ::after */
+.header-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url("data:image/svg+xml;utf8,\
+  <svg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'>\
+  <path d='M0,0V46.29c47.79,22,103.59,29.05,158,17C230,47,284,7,339,1s113,31,168,43,113,2,168-13,113-39,168-39,113,26,168,39,113,13,168,0V0Z' fill='%23ffffff'/>\
+  </svg>");
+  background-repeat: repeat-x;
+  background-size: 50% 50%;
+  animation: waveMove 4s linear infinite;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover Effect */
+.header-btn:hover::before {
+  bottom: 0;
+}
+
+.header-btn:hover::after {
+  opacity: 1;
+}
+
+.header-btn:hover {
+  color: #f47c04;
+}
+
+/* Wave animation */
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ================= MOBILE ================= */
