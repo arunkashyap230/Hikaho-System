@@ -23,36 +23,47 @@ export default function Hero() {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
     }, 5000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   return (
     <section className="hero">
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`hero-slide ${index === current ? "active" : ""}`}
-        >
-          <div className="container hero-inner">
-            {/* LEFT CONTENT */}
-            <div className="hero-content">
-              <h1>{slide.title}</h1>
-              <p>{slide.desc}</p>
-              <div className="hero-buttons">
-                <button className="btn-primary">
-                  Human Resource Services »
-                </button>
-                <button className="btn-outline">Read More »</button>
+      <div
+        className="hero-slider"
+        style={{
+          width: `${slides.length * 100}%`,
+          transform: `translateX(-${current * (100 / slides.length)}%)`,
+        }}
+      >
+        {slides.map((slide, index) => (
+          <div
+            className="hero-slide"
+            key={index}
+            style={{ width: `${100 / slides.length}%` }}
+          >
+            <div className="container hero-inner">
+              {/* LEFT CONTENT */}
+              <div className="hero-content">
+                <h1>{slide.title}</h1>
+                <p>{slide.desc}</p>
+
+                <div className="hero-buttons">
+                  <button className="btn-primary">
+                    Human Resource Services »
+                  </button>
+                  <button className="btn-outline">Read More »</button>
+                </div>
+              </div>
+
+              {/* RIGHT IMAGE */}
+              <div className="hero-visual">
+                <img src={slide.image} alt="Hero Slide" />
               </div>
             </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="hero-visual">
-              <img src={slide.image} alt="Hero Slide" />
-            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
       {/* DOTS */}
       <div className="hero-dots">

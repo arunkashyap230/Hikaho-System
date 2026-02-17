@@ -22,9 +22,11 @@ const SERVICES_DROPDOWN_ITEMS = [
 ];
 
 const CAREER_DROPDOWN_ITEMS = [
-  { label: "Current Opening", to: "/about#why-hikaho" },
-  { label: "Submit Your CV", to: "/about#vision-values" },
+  // { label: "Current Opening", to: "/about#why-hikaho" },
+  // { label: "Submit Your CV", to: "/about#vision-values" },
   { label: "", to: "/about#domain-expertise" },
+  { label: "Current Opening", to: "/career/current-opening" },
+  { label: "Submit Your CV", to: "/career" },
 ];
 
 const INDUSTRY_DROPDOWN_ITEMS = [
@@ -179,7 +181,7 @@ export default function Navbar() {
 
             {/* <Link to="/career">Career</Link> */}
             <div className="nav-dropdown">
-              <Link to="/Career" className="nav-dropdown-trigger">
+              <Link to="/career" className="nav-dropdown-trigger">
                 Career <span className="dropdown-caret">▾</span>
               </Link>
               <div className="nav-dropdown-menu">
