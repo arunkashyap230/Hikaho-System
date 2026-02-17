@@ -1220,21 +1220,27 @@ body {
 }
 
 /* ===== Current Opening / Jobs Listing ===== */
+/* ===== Current Opening / Jobs Listing ===== */
+
 .jobs-listing-section {
   background: #efefef;
+  padding: 60px 20px;
 }
 
 .jobs-layout {
   display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 44px;
+  grid-template-columns: 260px minmax(0, 1fr); /* thoda compact */
+  gap: 40px;
   align-items: start;
 }
 
+/* ===== LEFT FILTER PANEL ===== */
+
 .jobs-filter-panel h3 {
-  margin: 0 0 26px;
+  margin: 0 0 20px;
   color: #132d46;
-  font-size: clamp(30px, 1.8vw, 42px);
+  font-size: clamp(20px, 1.5vw, 26px); /* pehle 42px tha */
+  font-weight: 600;
 }
 
 .jobs-filter-panel ul {
@@ -1243,27 +1249,54 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
 }
 
 .jobs-filter-panel li {
   color: #132d46;
-  font-size: clamp(28px, 1.55vw, 38px);
+  font-size: clamp(15px, 1vw, 18px); /* pehle 38px tak ja raha tha */
   font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
+
+.jobs-filter-panel li:hover {
+  color: #f58220;
+}
+
+/* ===== RIGHT RESULTS PANEL ===== */
 
 .jobs-results-panel p {
   margin: 0;
   color: #1e3447;
-  font-size: clamp(24px, 1.2vw, 30px);
+  font-size: clamp(14px, 1vw, 16px);
 }
 
 .jobs-results-panel h2 {
-  margin: 52px 0 0;
+  margin: 40px 0 0;
   text-align: center;
   color: #132d46;
-  font-size: clamp(56px, 4vw, 90px);
+  font-size: clamp(28px, 3vw, 40px); /* pehle 90px tak ja raha tha */
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .jobs-layout {
+    grid-template-columns: 1fr; /* side by side ki jagah stack */
+    gap: 30px;
+  }
+
+  .jobs-filter-panel {
+    text-align: center;
+  }
+
+  .jobs-filter-panel ul {
+    align-items: center;
+  }
+
+  .jobs-results-panel h2 {
+    font-size: 26px;
+  }
 }
 
 /* ================= PRELOADER ================= */
