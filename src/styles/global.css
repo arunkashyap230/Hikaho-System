@@ -1216,3 +1216,147 @@ body {
   font-size: clamp(56px, 4vw, 90px);
   font-weight: 600;
 }
+
+/* ================= PRELOADER ================= */
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: grid; /* flex hata diya */
+  place-items: center; /* perfect center */
+  overflow: hidden;
+  z-index: 9999;
+  perspective: 1200px;
+}
+
+/* ================= LOGO ================= */
+
+.loader-content {
+  position: relative;
+  z-index: 30; /* gates se upar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-logo {
+  width: 220px;
+  max-width: 70vw; /* mobile safety */
+  animation: zoomIn 1s ease forwards;
+}
+
+/* ================= GATES ================= */
+
+.gate {
+  position: absolute;
+  top: 0;
+  width: 50vw; /* IMPORTANT change */
+  height: 100vh;
+  background: #ffffff;
+  z-index: 10;
+
+  transition:
+    transform 1.5s cubic-bezier(0.77, 0, 0.18, 1),
+    box-shadow 1.5s ease;
+
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.gate.left {
+  left: 0;
+  transform-origin: left center;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.gate.right {
+  right: 0;
+  transform-origin: right center;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= OPEN ANIMATION ================= */
+
+.preloader.open .gate.left {
+  transform: translateX(-100%) rotateY(-10deg);
+  box-shadow: 20px 0 40px rgba(0, 0, 0, 0.15);
+}
+
+.preloader.open .gate.right {
+  transform: translateX(100%) rotateY(10deg);
+  box-shadow: -20px 0 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= GOLDEN CENTER LINE ================= */
+
+.center-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100vh;
+  width: 3px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #d4af37,
+    #ffd700,
+    #d4af37,
+    transparent
+  );
+  animation: glow 1.5s infinite alternate;
+  z-index: 25;
+  transition: opacity 0.4s ease;
+}
+
+.preloader.open .center-line {
+  opacity: 0;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 6px #ffd700;
+  }
+  to {
+    box-shadow: 0 0 22px #ffd700;
+  }
+}
+
+/* ================= LOGO ANIMATION ================= */
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .loader-logo {
+    width: 160px;
+  }
+
+  .center-line {
+    width: 2px;
+  }
+
+  .preloader {
+    perspective: 800px;
+  }
+
+  .preloader.open .gate.left {
+    transform: translateX(-100%) rotateY(-6deg);
+  }
+
+  .preloader.open .gate.right {
+    transform: translateX(100%) rotateY(6deg);
+  }
+}
