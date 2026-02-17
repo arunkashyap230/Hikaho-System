@@ -872,43 +872,84 @@ body {
   margin-bottom: 4px;
 }
 
+/* ===== Career Section ===== */
+
 .career-form-section {
   background: #efefef;
+  padding: 100px 0;
 }
 
+/* 3D White Box */
 .career-form-wrap {
-  max-width: 980px;
+  max-width: 750px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 14px;
+
+  /* 3D Shadow Effect */
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.08),
+    0 8px 16px rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.3s ease;
 }
 
+/* Slight hover lift (premium feel) */
+.career-form-wrap:hover {
+  transform: translateY(-5px);
+}
+
+/* Form layout */
 .career-apply-form {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
+/* Inputs */
 .career-apply-form input,
 .career-apply-form textarea {
   width: 100%;
-  border: 1px solid #bcc2c8;
-  border-radius: 6px;
-  padding: 16px 28px;
-  font-size: clamp(20px, 1vw, 30px);
+  border: 1px solid #d6dde3;
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 15px;
   color: #18324a;
-  background: transparent;
+  background: #fff;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
+/* Focus effect */
+.career-apply-form input:focus,
+.career-apply-form textarea:focus {
+  border-color: #f5a000;
+  box-shadow: 0 0 0 3px rgba(245, 160, 0, 0.15);
+}
+
+/* File input */
 .career-apply-form input[type="file"] {
-  padding: 6px;
+  padding: 10px;
 }
 
+/* Button */
 .career-apply-form button {
+  margin-top: 10px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   background: #f5a000;
   color: #fff;
-  font-size: clamp(26px, 1.2vw, 34px);
+  font-size: 16px;
   font-weight: 500;
-  padding: 18px 16px;
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.career-apply-form button:hover {
+  background: #d88c00;
+  transform: translateY(-2px);
 }
 
 .industry-practice-card h3 a {
