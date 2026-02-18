@@ -446,27 +446,41 @@
   }
 }
 
+/* ===== Services Section ===== */
+
 @media (max-width: 1200px) {
   .services-detail-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
   }
 }
 
 @media (max-width: 768px) {
+  .services-detail {
+    padding: 40px 0;
+  }
+
   .services-detail-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 18px;
   }
 
   .service-detail-card h3 {
-    font-size: 32px;
+    font-size: 18px; /* Standard mobile heading */
+    margin-bottom: 10px;
+  }
+
+  .service-detail-card ul {
+    padding-left: 18px;
   }
 
   .service-detail-card li {
-    font-size: 18px;
+    font-size: 14px; /* Standard readable mobile text */
+    line-height: 1.6;
   }
 }
 
+/* ===== Career Section ===== */
 @media (max-width: 768px) {
   .career-apply-form {
     gap: 12px;

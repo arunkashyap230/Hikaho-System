@@ -895,35 +895,41 @@ body {
   color: #f58220;
 }
 
+/* ===== Services Section ===== */
+
 .services-detail {
   background: #ececec;
+  padding: 60px 0;
 }
 
 .services-detail-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px;
+  gap: 24px;
   align-items: start;
 }
 
+/* Heading */
 .service-detail-card h3 {
-  margin: 0 0 12px;
+  margin: 0 0 14px;
   color: #132d46;
-  font-size: clamp(30px, 1.7vw, 46px);
-  font-weight: 700;
+  font-size: clamp(18px, 1.2vw, 22px);   /* Standard size */
+  font-weight: 600;
 }
 
+/* List */
 .service-detail-card ul {
   margin: 0;
-  padding-left: 28px;
+  padding-left: 20px;
 }
 
 .service-detail-card li {
   color: #1e3447;
-  font-size: clamp(22px, 1.18vw, 32px);
-  line-height: 1.5;
-  margin-bottom: 4px;
+  font-size: clamp(14px, 0.95vw, 16px);  /* Standard paragraph size */
+  line-height: 1.6;
+  margin-bottom: 6px;
 }
+
 
 /* ===== Career Section ===== */
 
