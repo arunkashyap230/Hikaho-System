@@ -212,7 +212,7 @@ body {
 }
 
 .stats-showcase {
-  background: #ececec;
+  background: #f8f9fa;
   padding: 36px 0 40px;
 }
 .stats-grid {
@@ -472,7 +472,7 @@ body {
 /* ================= INDUSTRY PRACTICES SECTION ================= */
 
 .industry-practices {
-  background: #ececec;
+  background: #f8f9fa;;
   padding: 80px 0;
 }
 
@@ -599,7 +599,7 @@ body {
 
 .planning-copy h2 {
   margin: 0 0 26px;
-  font-size: clamp(44px, 4vw, 84px);
+  font-size: clamp(40px, 3vw, 84px);
   line-height: 1.12;
   color: #f4f6f8;
   max-width: 900px;
@@ -661,7 +661,7 @@ body {
 
 .testimonials-header {
   width: 100%; /* full width */
-  max-width: 1200px; /* optional, rectangle ka max width */
+  max-width: 0 auto; /* optional, rectangle ka max width */
   background: #ffffff; /* white rectangle */
   border-radius: 8px; /* optional rounded corners */
   padding: 80px 40px; /* height & spacing */
