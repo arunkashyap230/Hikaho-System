@@ -105,58 +105,80 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
+  /* Section Padding */
+  .about-showcase {
+    padding: 50px 0;
+  }
+
+  .image-2-bar {
+    width: 100%;
+  }
+
+  /* Layout 1 column */
   .about-layout {
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 30px;
   }
 
+  /* Visual Section Order Fix */
   .about-visuals {
-    position: static;
-    max-width: 520px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-showcase {
-    padding-top: 46px;
-    padding-bottom: 46px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0; /* ❌ 20px hata diya */
   }
 
-  .about-kicker {
-    margin-bottom: 8px;
+  /* Image 1 */
+  .about-top-image {
+    width: 100%;
+    max-width: 100%; /* ❌ 280px remove */
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    border-radius: 0;
   }
 
+  /* Experience Card (Image 1 ke bilkul niche) */
+  .about-exp-card {
+    width: 100%;
+    max-width: 100%; /* ❌ 280px remove */
+    padding: 50px;
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+    border-radius: 0 0 18px 18px;
+  }
+
+  /* Image 2 (Experience ke niche gap rahega) */
+  .about-middle-image {
+    width: 100%;
+    max-width: 100%; /* ❌ 280px remove */
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 24px; /* ✅ Sirf yaha gap */
+    border-radius: 0;
+  }
+
+  /* Typography Adjust */
   .about-content h2 {
-    margin-bottom: 20px;
+    font-size: 24px;
   }
 
   .about-content h3 {
-    margin: 22px 0 10px;
+    font-size: 18px;
   }
 
   .about-content p {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.7;
-    margin-bottom: 14px;
-  }
-
-  .about-exp-card {
-    padding: 20px 18px 24px;
-    margin-bottom: 20px;
   }
 
   .about-exp-card h3 {
-    font-size: 56px;
+    font-size: 50px;
   }
 
   .about-exp-card p {
-    font-size: 28px;
-  }
-
-  .about-accent-line {
-    height: 14px;
+    font-size: 20px;
   }
 }
 

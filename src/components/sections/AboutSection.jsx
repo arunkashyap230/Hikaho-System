@@ -28,7 +28,10 @@ export default function AboutSection() {
               src={slide2}
               alt="Human resource and talent acquisition concept"
             />
-            <div className="about-accent-line" aria-hidden="true" />
+
+            <div className="image-2-bar">
+              <div className="horizontal-bar"></div>
+            </div>
           </aside>
 
           <article className="about-content">

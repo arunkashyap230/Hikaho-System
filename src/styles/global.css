@@ -299,6 +299,7 @@ body {
   border: 1px solid #ddd;
 }
 
+
 /* ================= ABOUT SECTION ================= */
 
 .about-showcase {
@@ -319,16 +320,18 @@ body {
 /* 2 columns inside left side */
 .about-visuals {
   display: grid;
+  position: relative;
   grid-template-columns: 220px 220px;
   grid-template-rows: auto auto;
   gap: 0px 40px;
   align-items: start;
 }
 
+
 /* IMAGE 1 */
 .about-top-image {
-  width: 220px;
-  height: 280px; /* 🔥 length badhayi */
+  width: 250px;
+  height: 180px; /* 🔥 length badhayi */
   object-fit: cover; /* image stretch nahi hogi */
   border-radius: 12px;
   grid-column: 1;
@@ -338,35 +341,67 @@ body {
 
 /* IMAGE 2 */
 .about-middle-image {
-  width: 220px;
-  height: auto;
+  width: 250px;
+  height: 260px;
   border-radius: 12px;
   grid-column: 2;
   grid-row: 1;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  margin-top: 60px; 
 }
+
+.image-2-bar{
+   width: 220px; /* same as image width */
+  height: 15px;
+  margin-top: 12px;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.horizontal-bar {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  background: #f47c04;
+  left: 0;
+  animation: moveBar 2.5s linear infinite alternate;
+}
+
+
+@keyframes moveBar {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 40%;
+  }
+}
+
 
 /* EXPERIENCE CARD (Below Image 1) */
 .about-exp-card {
-  width: 220px;
-  background: #f58220;
+  width: 250px;
+  background: #F47C04;
   color: #fff;
-  padding: 22px;
+  padding: 20px;
   border-radius: 12px;
   text-align: center;
   grid-column: 1;
   grid-row: 2;
+
+  margin-top: -140px; 
 }
 
 .about-exp-card h3 {
   margin: 0;
-  font-size: 40px;
+  font-size: 64px;
   font-weight: 700;
   line-height: 1;
 }
 
 .about-exp-card h3 span {
-  font-size: 0.6em;
+  font-size: 40px;
 }
 
 .about-exp-card p {
@@ -374,6 +409,7 @@ body {
   font-size: 15px;
   font-weight: 600;
 }
+
 
 /* ================= RIGHT SIDE ================= */
 
@@ -842,8 +878,9 @@ body {
   }
 }
 
+
 .about-page-hero {
-  background: #cbb7a1;
+  background: #a9a1cb;
   padding: 72px 0 86px;
   position: relative;
   overflow: hidden;
@@ -894,6 +931,7 @@ body {
 .about-page-breadcrumb span:last-child {
   color: #f58220;
 }
+
 
 /* ===== Services Section ===== */
 
