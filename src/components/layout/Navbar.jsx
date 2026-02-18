@@ -25,7 +25,7 @@ const SERVICES_DROPDOWN_ITEMS = [
 const CAREER_DROPDOWN_ITEMS = [
   // { label: "Current Opening", to: "/about#why-hikaho" },
   // { label: "Submit Your CV", to: "/about#vision-values" },
-  { label: "", to: "/about#domain-expertise" },
+  // { label: "", to: "/about#domain-expertise" },
   { label: "Current Opening", to: "/career/current-opening" },
   { label: "Submit Your CV", to: "/career" },
 ];
