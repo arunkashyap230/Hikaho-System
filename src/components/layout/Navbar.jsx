@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FiClock, FiMail, FiPhoneCall } from "react-icons/fi";
 import logo from "../../assets/logo-3.png";
 
 import "./navbar.css";
@@ -128,9 +129,18 @@ export default function Navbar() {
 
           {/* Right – Contact details */}
           <div className="contact-info">
-            <span>📞 Call us: {PHONE}</span>
+            {/* <span>📞 Call us: {PHONE}</span>
             <span>✉ {EMAIL}</span>
-            <span>🕒 {HOURS}</span>
+            <span>🕒 {HOURS}</span> */}
+            <span>
+              <FiPhoneCall /> Call us: {PHONE}
+            </span>
+            <span>
+              <FiMail /> {EMAIL}
+            </span>
+            <span>
+              <FiClock /> {HOURS}
+            </span>
           </div>
         </div>
       </div>

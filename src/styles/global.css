@@ -1299,6 +1299,7 @@ body {
   }
 }
 
+/* 
 /* ================= PRELOADER ================= */
 
 .preloader {
@@ -1441,4 +1442,4 @@ body {
   .preloader.open .gate.right {
     transform: translateX(100%) rotateY(6deg);
   }
-}
+} */

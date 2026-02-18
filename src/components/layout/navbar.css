@@ -13,12 +13,11 @@ body {
 }
 
 /* ================= TOP BAR ================= */
-
 .top-bar {
-  background: #a04f0956;
-  padding: 8px 0;
+  background: linear-gradient(90deg, #bda78f 0%, #b69d83 100%);
+  padding: 0;
   font-size: 14px;
-  border-bottom: 1px solid #e0d8cc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* subtle border */
 }
 
 .top-bar-container {
@@ -26,31 +25,50 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  align-items: center; /* center vertically */
+  min-height: 40px; /* slightly smaller height */
+  padding: 0 15px;
 }
 
 /* Social Icons */
-
 .social-icons {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 4px; /* small spacing between icons */
 }
 
 .social-icons span {
-  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px; /* compact padding */
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
   font-weight: 500;
+  background: rgba(0, 0, 0, 0.08); /* subtle background */
+  height: 28px; /* uniform height */
+  line-height: 28px;
+  font-size: 13px;
+  border-radius: 4px; /* rounded corners */
 }
 
 .social-icons a {
-  color: #333;
-  font-size: 16px;
-  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; /* compact square */
+  height: 28px;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1); /* subtle box */
+  border-radius: 4px;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #e67e22;
+  background: rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px); /* slight lift */
 }
 
 .logo img {
@@ -62,14 +80,22 @@ body {
 
 .contact-info {
   display: flex;
-  gap: 24px;
+  gap: 0;
   font-weight: 500;
+  color: #fff;
 }
 
 .contact-info span {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  padding: 0 22px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.contact-info span svg {
+  font-size: 15px;
 }
 
 /* ================= NAVBAR ================= */
@@ -375,14 +401,31 @@ body {
 @media (max-width: 768px) {
   .top-bar-container {
     flex-direction: column;
-    gap: 8px;
+    gap: 0px;
     text-align: center;
+  }
+
+  .social-icons,
+  .contact-info {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .social-icons {
+    min-height: 44px;
   }
 
   .contact-info {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .contact-info span {
+    min-height: 44px;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 
